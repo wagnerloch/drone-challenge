@@ -3,7 +3,8 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        InputReader inputReader = new InputReader("Input.txt");
+        // Read all data from file and initialize all structures
+        InputReader inputReader = new InputReader("src/main/resources/Input.txt");
 
         // Get all deliveries to do
         List<Delivery> deliveriesToDo = inputReader.getDeliveries();
@@ -13,7 +14,7 @@ public class App {
 
         while (deliveriesToDo.size() > 0) {
             for (int i = 0; i < availableDrones.size(); i++) {
-                // Set the current weight that drone is carrying to zero
+                // Set the current weight that drone is carrying with it to zero
                 int currentWeight = 0;
 
                 // Create a list of locations that this drone is going to do
@@ -41,7 +42,7 @@ public class App {
                         // remove the delivery from the available list
                         deliveriesToDo.remove(j);
                     }
-                    if (currentWeight >= droneMaxWeight) {
+                    if (currentWeight == droneMaxWeight) {
                         // Already full weight
                         break;
                     }
@@ -51,5 +52,8 @@ public class App {
                 availableDrones.get(i).makeTrip(locationsInCurrentTrip.toArray(new String[0]));
             }
         }
+
+        OutputWriter ow = new OutputWriter(availableDrones);
+        ow.writeResponseInFile("src/main/resources/Output.txt");
     }
 }

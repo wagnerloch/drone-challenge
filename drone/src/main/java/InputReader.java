@@ -25,15 +25,26 @@ public class InputReader {
                 locationParser(scanner.nextLine());
             }
         } catch (Exception e) {
-            // TODO: handle exception
+            System.err.println("Error reading file " + file);
+            System.err.println("Exception: " + e.getMessage());
         }
 
     }
 
+    /**
+     * Receives a list of drones in a single line and parse to save all of them
+     * 
+     * @param dronesLine String containing drone name and maximum weight in format:
+     *                   [DroneA], [200], [DroneB], [250], [DroneC], [100]
+     */
     private void droneParser(String dronesLine) {
         // First of all, remove all [] from the line
         String dronesLineClean = dronesLine.replaceAll("\\[|\\]", "");
+
+        // Separate into tokens containing name and maximum weight supported
         String[] tokens = dronesLineClean.split(", ");
+
+        // As name and maximum weight are always together, we can increment always 2
         for (int i = 0; i < tokens.length; i = i + 2) {
             String name = tokens[i];
             int maxWeight = Integer.parseInt(tokens[i + 1]);
