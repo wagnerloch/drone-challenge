@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class InputReaderTest {
     private InputReader inputReader;
-    private final String fileName = "C:\\Desenvolvimento\\drone-challenge\\drone\\src\\tests\\resources\\Input.txt";
+    private final String fileName = "src/tests/resources/Input.txt";
 
     @Before
     public void setUp() {

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OutputWriterTest {
     private List<Drone> drones;
     private OutputWriter outputWriter;
-    private final String testFilePath = "C:\\Desenvolvimento\\drone-challenge\\drone\\src\\tests\\resources";
+    private final String testFilePath = "src/tests/resources/";
     private final String outputFile = testFilePath + "Output_Test.txt";
 
     @BeforeEach
