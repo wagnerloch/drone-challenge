@@ -6,34 +6,34 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DroneTest {
     @Test
     public void testGetName() {
-        Drone drone = new Drone("Drone 1", 1000);
-        assertEquals("Drone 1", drone.getName());
+        Drone drone = new Drone("DroneA", 200);
+        assertEquals("DroneA", drone.getName());
     }
 
     @Test
     public void testGetMaxWeight() {
-        Drone drone = new Drone("Drone 1", 1000);
-        assertEquals(1000, drone.getMaxWeight());
+        Drone drone = new Drone("DroneA", 200);
+        assertEquals(200, drone.getMaxWeight());
     }
 
     @Test
     public void testSetName() {
-        Drone drone = new Drone("Drone 1", 1000);
-        drone.setName("Drone 2");
-        assertEquals("Drone 2", drone.getName());
+        Drone drone = new Drone("", 200);
+        drone.setName("DroneA");
+        assertEquals("DroneA", drone.getName());
     }
 
     @Test
     public void testSetMaxWeight() {
-        Drone drone = new Drone("Drone 1", 1000);
-        drone.setMaxWeight(1500);
-        assertEquals(1500, drone.getMaxWeight());
+        Drone drone = new Drone("DroneA", 0);
+        drone.setMaxWeight(200);
+        assertEquals(200, drone.getMaxWeight());
     }
 
     @Test
     public void testMakeTrip() {
-        Drone drone = new Drone("Drone 1", 1000);
-        String[] locations = { "São Paulo", "Rio de Janeiro" };
+        Drone drone = new Drone("DroneA", 200);
+        String[] locations = { "LocationA", "LocationB" };
         drone.makeTrip(locations);
         List<String[]> trips = drone.getTrips();
         assertEquals(1, trips.size());
@@ -42,9 +42,9 @@ public class DroneTest {
 
     @Test
     public void testGetTrips() {
-        Drone drone = new Drone("Drone 1", 1000);
-        String[] locations1 = { "São Paulo", "Rio de Janeiro" };
-        String[] locations2 = { "Rio de Janeiro", "Belo Horizonte" };
+        Drone drone = new Drone("DroneA", 200);
+        String[] locations1 = { "LocationA", "LocationB" };
+        String[] locations2 = { "LocationC", "LocationD" };
         drone.makeTrip(locations1);
         drone.makeTrip(locations2);
         List<String[]> trips = drone.getTrips();
