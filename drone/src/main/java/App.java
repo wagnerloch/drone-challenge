@@ -29,11 +29,12 @@ public class App {
                     // get the weight of the delivery
                     int currentDeliveryWeight = deliveriesToDo.get(j).getWeight();
 
-                    // get location name
-                    String currentLocationName = deliveriesToDo.get(j).getLocation();
-
                     if (currentDeliveryWeight + currentWeight <= droneMaxWeight) {
                         // This drone is available to do the trip
+
+                        // get location name
+                        String currentLocationName = deliveriesToDo.get(j).getLocation();
+
                         locationsInCurrentTrip.add(currentLocationName);
 
                         // update the current weight

@@ -32,12 +32,17 @@ public class OutputWriter {
                 // Iterates over all trips
                 for (int j = 0; j < drones.get(i).getTrips().size(); j++) {
                     int currentTrip = j + 1;
-                    bufferedWriter.write("Trip #" + currentTrip);
-                    bufferedWriter.newLine();
                     // Get all locations of the current trip
                     String[] locationsInCurrentTrip = drones.get(i).getTrips().get(j);
-                    bufferedWriter.write(getLocationsInSingleLine(locationsInCurrentTrip));
-                    bufferedWriter.newLine();
+
+                    // Check if there is any location
+                    if (locationsInCurrentTrip.length > 0) {
+                        bufferedWriter.write("Trip #" + currentTrip);
+                        bufferedWriter.newLine();
+
+                        bufferedWriter.write(getLocationsInSingleLine(locationsInCurrentTrip));
+                        bufferedWriter.newLine();
+                    }
                 }
                 bufferedWriter.newLine();
             }
