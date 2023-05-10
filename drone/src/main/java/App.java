@@ -55,6 +55,6 @@ public class App {
         }
 
         OutputWriter ow = new OutputWriter(availableDrones);
-        ow.writeResponseInFile("src/main/resources/Output.txt");
+        ow.writeResponseInFile("Output.txt");
     }
 }
