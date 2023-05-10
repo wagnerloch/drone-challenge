@@ -16,6 +16,11 @@ public class InputReader {
         this.readFromFile(file);
     }
 
+    /**
+     * Receives a file, read his content and call droneParser and locationParser
+     * 
+     * @param file with the input for the algorithm.
+     */
     private void readFromFile(File file) {
         try {
             scanner = new Scanner(file);

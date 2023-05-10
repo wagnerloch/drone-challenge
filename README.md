@@ -16,11 +16,11 @@ Another strength of this algorithm is that it considers the maximum weight each 
 
 ## How to Run
 
-1 - Clone this repository to your local machine;
-2 - Open `drone` folder in VSCode;
-3 - Run App.java in `src/main/java/App.java`
-4 - The result output will be available in `Output.txt`
-5 - You can create new test files using the FileGenerator in `src/utils/FileGenerator.java`. Just run it and it will generate a new `data.txt` with 100 drones and 500 deliveries for testing.
+1. Clone this repository to your local machine;
+2. Open `drone` folder in VSCode;
+3. Run App.java in `src/main/java/App.java`
+4. The result output will be available in `Output.txt`
+5. You can create new test files using the FileGenerator in `src/utils/FileGenerator.java`. Just run it and it will generate a new `data.txt` with 100 drones and 500 deliveries for testing.
 
 ## Dependencies
 
